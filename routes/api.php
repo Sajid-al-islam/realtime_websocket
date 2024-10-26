@@ -19,8 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('recieve', [SocketController::class, 'receive'])->name('websocket')->middleware('throttle:10000,1');
-Route::post('recieve-one', [SocketController::class, 'receive'])->name('websocket')->middleware('throttle:10000,1');
-Route::post('recieve-two', [SocketController::class, 'receive'])->name('websocket')->middleware('throttle:10000,1');
-Route::post('recieve-three', [SocketController::class, 'receive'])->name('websocket')->middleware('throttle:10000,1');
-Route::post('recieve-four', [SocketController::class, 'receive'])->name('websocket')->middleware('throttle:10000,1');
+Route::post('recieve', [SocketController::class, 'receive'])->name('websocket_1')->middleware('throttle:10000,1');
+Route::post('recieve-one', [SocketController::class, 'receive'])->name('websocket_2')->middleware('throttle:10000,1');
+Route::post('recieve-two', [SocketController::class, 'receive'])->name('websocket_3')->middleware('throttle:10000,1');
+Route::post('recieve-three', [SocketController::class, 'receive'])->name('websocket_4')->middleware('throttle:10000,1');
+Route::post('recieve-four', [SocketController::class, 'receive'])->name('websocket_5')->middleware('throttle:10000,1');
