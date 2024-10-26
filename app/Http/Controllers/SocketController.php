@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\Example;
 use App\Events\MessageSent;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class SocketController extends Controller
         $response = 'failed';
         $code = 400;
         try {
-            broadcast(new MessageSent($request->all()));
+            broadcast(new Example($request->all()));
             $response = 'Event Broadcasted';
             $code = 200;
         } catch (\Throwable $th) {
