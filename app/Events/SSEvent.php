@@ -32,7 +32,7 @@ class SSEvent
      */
     public function broadcastOn(): array
     {
-        return [new Channel('chat')];
+        return [new Channel('ss_chat')];
     }
 
     public function broadcastWith(): array

@@ -32,7 +32,7 @@ class BDEvent
      */
     public function broadcastOn(): array
     {
-        return [new Channel('chat')];
+        return [new Channel('bd_chat')];
     }
 
     public function broadcastWith(): array

@@ -20,3 +20,11 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 Broadcast::channel('chat', function () {
     return true;
 });
+
+Broadcast::channel('bd_chat', function () {
+    return true;
+});
+
+Broadcast::channel('ss_chat', function () {
+    return true;
+});
