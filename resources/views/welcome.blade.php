@@ -15,6 +15,16 @@
                 .listen('MessageSent', (e) => {
                     console.log('Message received:', e);
                 });
+
+            window.Echo.channel('bd_chat')
+                .listen('MessageSent', (e) => {
+                    console.log('Message received:', e);
+                });
+
+            window.Echo.channel('ss_chat')
+                .listen('MessageSent', (e) => {
+                    console.log('Message received:', e);
+                });
         });
     </script>
 </body>

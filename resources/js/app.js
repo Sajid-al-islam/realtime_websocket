@@ -20,3 +20,13 @@ window.Echo.channel("chat")
     .listen(".message.sent", (e) => {
         console.log("Message received:", e); // Logs the message data
     });
+
+window.Echo.channel('bd_chat')
+    .listen('MessageSent', (e) => {
+        console.log('Message received:', e);
+    });
+
+window.Echo.channel('ss_chat')
+    .listen('MessageSent', (e) => {
+        console.log('Message received:', e);
+    });
