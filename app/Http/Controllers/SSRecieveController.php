@@ -15,8 +15,9 @@ class SSRecieveController extends Controller
             $response = 'Event Broadcasted';
             $code = 200;
         } catch (\Throwable $th) {
-            $response = $th->getMessage();
-            $code = $th->getCode();
+            $response = $th->getMessage() ?? 'Something went wrong!';
+            $code = $th->getCode() ?? 500;
+            info('EVENT_TRIGGER_FAILED', [$response]);
         }
 
         return response()->json($response, $code);
